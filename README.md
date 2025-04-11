@@ -29,7 +29,6 @@ Custom drawing and animations using CustomPainter to create complex shapes and e
 <p align="center">
     <img src="https://github.com/Liyafar27/my_storage/blob/master/6.gif" width="250" alt="accessibility text">
     <img src="https://github.com/Liyafar27/my_storage/blob/master/33.gif" width="250" alt="accessibility text">
-    <img src="https://github.com/Liyafar27/my_storage/blob/master/2.gif" width="250" alt="accessibility text">
     <img src="https://github.com/Liyafar27/my_storage/blob/master/1.gif" width="250" alt="accessibility text">
 
 
