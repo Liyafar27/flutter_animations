@@ -14,7 +14,7 @@ Animates widgets between screens with a shared tag, providing smooth transitions
 ### Physics-based Animations
 Simulates real-world physical interactions like bouncing and gravity using physics simulations.
 
-### #Custom + Image
+### Custom + Image
 Custom animations applied to images, involving transformations like scaling, rotation, and translation.
 
 ### Custom + Painter
