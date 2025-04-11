@@ -1,6 +1,9 @@
 ## 🧿Flutter Animation Showcase🧿
 <p align="center">
     <img src="https://raw.githubusercontent.com/Liyafar27/my_storage/refs/heads/master/00000.gif" width="250" alt="accessibility text">
+     <img src="https://raw.githubusercontent.com/Liyafar27/my_storage/refs/heads/master/Simulator%20Screenshot%20-%20iPhone%20SE%20(3rd%20generation)%20-%202025-04-08%20at%2017.23.24.png" width="250" alt="accessibility text">
+     <img src="https://raw.githubusercontent.com/Liyafar27/my_storage/refs/heads/master/Simulator%20Screenshot%20-%20iPhone%20SE%20(3rd%20generation)%20-%202025-04-08%20at%2017.23.24.png" width="250" alt="accessibility text">
+    
 This app demonstrates various Flutter animation techniques using only Flutter's built-in methods.
 
 ### Implicit Animations
@@ -31,8 +34,7 @@ Custom drawing and animations using CustomPainter to create complex shapes and e
  <p align="center">
        <img src="https://raw.githubusercontent.com/Liyafar27/my_storage/refs/heads/master/Simulator%20Screenshot%20-%20iPhone%20SE%20(3rd%20generation)%20-%202025-04-08%20at%2017.25.23.png" width="250" alt="accessibility text">  
       <img src="https://raw.githubusercontent.com/Liyafar27/my_storage/refs/heads/master/Simulator%20Screenshot%20-%20iPhone%20SE%20(3rd%20generation)%20-%202025-04-08%20at%2017.27.29.png" width="250" alt="accessibility text">
-     <img src="https://raw.githubusercontent.com/Liyafar27/my_storage/refs/heads/master/Simulator%20Screenshot%20-%20iPhone%20SE%20(3rd%20generation)%20-%202025-04-08%20at%2017.27.55.png" width="250" alt="accessibility text">
-
+     <img src="https://raw.githubusercontent.com/Liyafar27/my_storage/refs/heads/master/6.gif" width="250" alt="accessibility text">
 
      🚀 Getting Started
 bash
