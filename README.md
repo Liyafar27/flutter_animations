@@ -1,21 +1,23 @@
 ## 🧿Flutter Animation Showcase🧿
+
 This app demonstrates various Flutter animation techniques using only Flutter's built-in methods.
-Implicit Animations
+
+#Implicit Animations
 Automatically animates changes to properties like size, color, and position with minimal setup.
 
-Explicit Animations
+#Explicit Animations
 Provides full control over animations, including timing, curves, and properties using AnimationController and Tween.
 
-Hero Animations
+#Hero Animations
 Animates widgets between screens with a shared tag, providing smooth transitions.
 
-Physics-based Animations
+#Physics-based Animations
 Simulates real-world physical interactions like bouncing and gravity using physics simulations.
 
-Custom + Image
+#Custom + Image
 Custom animations applied to images, involving transformations like scaling, rotation, and translation.
 
-Custom + Painter
+#Custom + Painter
 Custom drawing and animations using CustomPainter to create complex shapes and effects.
 
 📸 Screenshots
