@@ -1,16 +1,41 @@
-# flutter_animations_showroom
+## 🧿Flutter Animation Showcase🧿
+This app demonstrates various Flutter animation techniques using only Flutter's built-in methods.
+Implicit Animations
+Automatically animates changes to properties like size, color, and position with minimal setup.
 
-A new Flutter project.
+Explicit Animations
+Provides full control over animations, including timing, curves, and properties using AnimationController and Tween.
 
-## Getting Started
+Hero Animations
+Animates widgets between screens with a shared tag, providing smooth transitions.
 
-This project is a starting point for a Flutter application.
+Physics-based Animations
+Simulates real-world physical interactions like bouncing and gravity using physics simulations.
 
-A few resources to get you started if this is your first Flutter project:
+Custom + Image
+Custom animations applied to images, involving transformations like scaling, rotation, and translation.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Custom + Painter
+Custom drawing and animations using CustomPainter to create complex shapes and effects.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+📸 Screenshots
+<p align="center">
+    <img src="https://raw.githubusercontent.com/Liyafar27/my_storage/refs/heads/master/Simulator%20Screenshot%20-%20iPhone%20SE%20(3rd%20generation)%20-%202025-04-08%20at%2017.23.02.png" width="250" alt="accessibility text">  
+    <img src="https://raw.githubusercontent.com/Liyafar27/my_storage/refs/heads/master/Simulator%20Screenshot%20-%20iPhone%20SE%20(3rd%20generation)%20-%202025-04-08%20at%2017.23.24.png" width="250" alt="accessibility text">
+    <img src="https://raw.githubusercontent.com/Liyafar27/my_storage/refs/heads/master/Simulator%20Screenshot%20-%20iPhone%20SE%20(3rd%20generation)%20-%202025-04-08%20at%2017.23.45.png" width="250" alt="accessibility text">
+   
+
+ <p align="center">
+       <img src="https://raw.githubusercontent.com/Liyafar27/my_storage/refs/heads/master/Simulator%20Screenshot%20-%20iPhone%20SE%20(3rd%20generation)%20-%202025-04-08%20at%2017.25.23.png" width="250" alt="accessibility text">  
+      <img src="https://raw.githubusercontent.com/Liyafar27/my_storage/refs/heads/master/Simulator%20Screenshot%20-%20iPhone%20SE%20(3rd%20generation)%20-%202025-04-08%20at%2017.27.29.png" width="250" alt="accessibility text">
+     <img src="https://raw.githubusercontent.com/Liyafar27/my_storage/refs/heads/master/Simulator%20Screenshot%20-%20iPhone%20SE%20(3rd%20generation)%20-%202025-04-08%20at%2017.27.55.png" width="250" alt="accessibility text">
+
+
+     🚀 Getting Started
+bash
+```
+git clone [https://github.com/yourusername/flutter_animations_showroom](https://github.com/Liyafar27/flutter_animations_showroom.git
+cd flutter_animations_showroom
+flutter pub get
+flutter run
+```
