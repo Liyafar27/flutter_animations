@@ -26,17 +26,12 @@ Custom drawing and animations using CustomPainter to create complex shapes and e
 
 📸 Screenshots
 <p align="center">
-    <img src="https://raw.githubusercontent.com/Liyafar27/my_storage/refs/heads/master/Simulator%20Screenshot%20-%20iPhone%20SE%20(3rd%20generation)%20-%202025-04-08%20at%2017.23.02.png" width="250" alt="accessibility text">  
-    <img src="https://raw.githubusercontent.com/Liyafar27/my_storage/refs/heads/master/Simulator%20Screenshot%20-%20iPhone%20SE%20(3rd%20generation)%20-%202025-04-08%20at%2017.23.24.png" width="250" alt="accessibility text">
-    <img src="https://raw.githubusercontent.com/Liyafar27/my_storage/refs/heads/master/Simulator%20Screenshot%20-%20iPhone%20SE%20(3rd%20generation)%20-%202025-04-08%20at%2017.23.45.png" width="250" alt="accessibility text">
+        <img src="https://github.com/Liyafar27/my_storage/blob/master/6.gif" width="250" alt="accessibility text">
+     <img src="https://github.com/Liyafar27/my_storage/blob/master/33.gif" width="250" alt="accessibility text">
+     <img src="https://github.com/Liyafar27/my_storage/blob/master/2.gif" width="250" alt="accessibility text">
    
 
- <p align="center">
-       <img src="https://raw.githubusercontent.com/Liyafar27/my_storage/refs/heads/master/Simulator%20Screenshot%20-%20iPhone%20SE%20(3rd%20generation)%20-%202025-04-08%20at%2017.25.23.png" width="250" alt="accessibility text">  
-      <img src="https://raw.githubusercontent.com/Liyafar27/my_storage/refs/heads/master/Simulator%20Screenshot%20-%20iPhone%20SE%20(3rd%20generation)%20-%202025-04-08%20at%2017.27.29.png" width="250" alt="accessibility text">
-     <img src="https://raw.githubusercontent.com/Liyafar27/my_storage/refs/heads/master/6.gif" width="250" alt="accessibility text">
-
-     🚀 Getting Started
+🚀 Getting Started
 bash
 ```
 git clone [https://github.com/yourusername/flutter_animations_showroom](https://github.com/Liyafar27/flutter_animations_showroom.git
