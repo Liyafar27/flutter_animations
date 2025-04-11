@@ -1,10 +1,5 @@
 ## 🧿Flutter Animation Showcase🧿
-<p align="center">
-    <img src="https://raw.githubusercontent.com/Liyafar27/my_storage/refs/heads/master/00000.gif" width="250" alt="accessibility text">
-    <img src="https://github.com/Liyafar27/my_storage/blob/master/4.gif" width="250" alt="accessibility text">
-    <img src="https://github.com/Liyafar27/my_storage/blob/master/5.gif" width="250" alt="accessibility text">
 
-    
 This app demonstrates various Flutter animation techniques using only Flutter's built-in methods.
 
 ### Implicit Animations
@@ -26,6 +21,12 @@ Custom animations applied to images, involving transformations like scaling, rot
 Custom drawing and animations using CustomPainter to create complex shapes and effects.
 
 📸 Screenshots
+<p align="center">
+    <img src="https://raw.githubusercontent.com/Liyafar27/my_storage/refs/heads/master/00000.gif" width="250" alt="accessibility text">
+    <img src="https://github.com/Liyafar27/my_storage/blob/master/4.gif" width="250" alt="accessibility text">
+    <img src="https://github.com/Liyafar27/my_storage/blob/master/5.gif" width="250" alt="accessibility text">
+
+    
 <p align="center">
     <img src="https://github.com/Liyafar27/my_storage/blob/master/6.gif" width="250" alt="accessibility text">
     <img src="https://github.com/Liyafar27/my_storage/blob/master/33.gif" width="250" alt="accessibility text">
