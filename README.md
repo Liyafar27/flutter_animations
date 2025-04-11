@@ -1,16 +1,47 @@
-# flutter_animations_showroom
+## 🧿Flutter Animation Showcase🧿
 
-A new Flutter project.
+This app demonstrates various Flutter animation techniques using only Flutter's built-in methods.
 
-## Getting Started
+### Implicit Animations
+Automatically animates changes to properties like size, color, and position with minimal setup.
 
-This project is a starting point for a Flutter application.
+### Explicit Animations
+Provides full control over animations, including timing, curves, and properties using AnimationController and Tween.
 
-A few resources to get you started if this is your first Flutter project:
+### Hero Animations
+Animates widgets between screens with a shared tag, providing smooth transitions.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### Physics-based Animations
+Simulates real-world physical interactions like bouncing and gravity using physics simulations.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### Custom + Image
+Custom animations applied to images, involving transformations like scaling, rotation, and translation.
+
+### Custom + Painter
+Custom drawing and animations using CustomPainter to create complex shapes and effects.
+
+📸 Screenshots
+<p align="center">
+    <img src="https://raw.githubusercontent.com/Liyafar27/my_storage/refs/heads/master/00000.gif" width="250" alt="accessibility text">
+    <img src="https://github.com/Liyafar27/my_storage/blob/master/4.gif" width="250" alt="accessibility text">
+    <img src="https://github.com/Liyafar27/my_storage/blob/master/5.gif" width="250" alt="accessibility text">
+
+    
+<p align="center">
+    <img src="https://github.com/Liyafar27/my_storage/blob/master/7.gif" width="250" alt="accessibility text">
+    <img src="https://github.com/Liyafar27/my_storage/blob/master/33.gif" width="250" alt="accessibility text">
+    <img src="https://github.com/Liyafar27/my_storage/blob/master/1.gif" width="250" alt="accessibility text">
+    
+<p align="center">
+    <img src="https://github.com/Liyafar27/my_storage/blob/master/8.gif" width="250" alt="accessibility text">
+    <img src="https://github.com/Liyafar27/my_storage/blob/master/2.gif" width="250" alt="accessibility text">
+
+
+🚀 Getting Started
+bash
+```
+git clone [https://github.com/yourusername/flutter_animations_showroom](https://github.com/Liyafar27/flutter_animations_showroom.git
+cd flutter_animations_showroom
+flutter pub get
+flutter run
+```
