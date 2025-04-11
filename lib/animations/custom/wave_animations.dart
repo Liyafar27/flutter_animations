@@ -1,4 +1,5 @@
 import 'dart:math';
+
 import 'package:flutter/material.dart';
 
 class NeonWavePage extends StatefulWidget {
@@ -21,7 +22,7 @@ class _NeonWavePageState extends State<NeonWavePage>
         AnimationController(vsync: this, duration: Duration(seconds: 360))
           ..addListener(() {
             setState(() {
-              _phase = (_phase + 0.01) % (4 * pi);
+              _phase = (_phase + 0.01) % (10 * pi);
             });
           })
           ..repeat();
@@ -81,29 +82,97 @@ class NeonWavePainter extends CustomPainter {
     canvas.drawPath(seaPath, seaPaint);
 
     _drawSky(canvas, size);
-    _drawWave(canvas, size, 2.5, Colors.indigo.withOpacity(0.2), 20, 1.5, 0.6);
-
     _drawWave(
       canvas,
       size,
-      1,
-      Colors.cyanAccent.withOpacity(0.1),
-      30,
+      5.5,
+      Colors.blue.withOpacity(0.1),
+      10,
       1.0,
       0.6,
+      MaskFilter.blur(BlurStyle.normal, 5),
     );
-
     _drawWave(
       canvas,
       size,
-      3,
-      Colors.blue.shade900.withOpacity(0.3),
+      6.5,
+      Colors.blue.shade900.withOpacity(0.1),
       15,
       1.0,
       0.6,
+      MaskFilter.blur(BlurStyle.normal, 15),
+    );
+    _drawWave(
+      canvas,
+      size,
+      7.5,
+      Colors.blueAccent.withOpacity(0.2),
+      25,
+      1.0,
+      0.6,
+      MaskFilter.blur(BlurStyle.normal, 15),
+    );
+    _drawWave(
+      canvas,
+      size,
+      8,
+      Color(0xFF020617).withOpacity(0.3),
+      15,
+      1.0,
+      0.6,
+      MaskFilter.blur(BlurStyle.normal, 25),
+    );
+    _drawWave(
+      canvas,
+      size,
+      7,
+      Colors.blue.shade900.withOpacity(0.5),
+      20,
+      1.0,
+      0.6,
+      MaskFilter.blur(BlurStyle.outer, 10),
+    );
+    _drawWave(
+      canvas,
+      size,
+      5,
+      Colors.blue.shade400.withOpacity(0.3),
+      20,
+      1.5,
+      0.6,
+      MaskFilter.blur(BlurStyle.outer, 10),
+    );
+    _drawWave(
+      canvas,
+      size,
+      5,
+      Colors.blue.shade900.withOpacity(0.4),
+      15,
+      1,
+      0.6,
+      MaskFilter.blur(BlurStyle.outer, 10),
     );
 
-    _drawWave(canvas, size, 7, Colors.black.withOpacity(0.1), 30, 1.0, 0.6);
+    _drawWave(
+      canvas,
+      size,
+      5.5,
+      Colors.lightBlueAccent.withOpacity(0.4),
+      30,
+      1.5,
+      0.6,
+      MaskFilter.blur(BlurStyle.outer, 6),
+    );
+    _drawWave(
+      canvas,
+      size,
+      8,
+      Colors.blueAccent.withOpacity(0.2),
+      33,
+      1.0,
+      0.6,
+      MaskFilter.blur(BlurStyle.outer, 5),
+    );
   }
 
   void _drawWave(
@@ -114,12 +183,13 @@ class NeonWavePainter extends CustomPainter {
     double amplitude,
     double zoom,
     double heightFactor,
+    MaskFilter blurStyle,
   ) {
     final paint =
         Paint()
           ..color = color
           ..style = PaintingStyle.fill
-          ..maskFilter = MaskFilter.blur(BlurStyle.normal, 5);
+          ..maskFilter = blurStyle;
 
     final path = Path();
     path.moveTo(0, size.height);

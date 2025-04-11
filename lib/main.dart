@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_animations_showroom/animations/custom/neon_brain.dart';
 import 'package:flutter_animations_showroom/animations/hero/hero_animation_page.dart';
+import 'package:flutter_animations_showroom/animations/implicit/implicit_animation_page.dart';
 
-import 'animations/custom/custom_animation_heart.dart';
 import 'animations/custom/wave_animations.dart';
-import 'animations/implicit/implicit_animation_page.dart';
+import 'animations/explicit/explicit_animations_page.dart';
 import 'animations/physics/car_animation.dart';
 import 'animations/physics/physics_animation_page.dart';
 
@@ -53,8 +54,8 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
     Section(title: 'Physics-based', icon: Icons.attractions),
     Section(title: 'Custom + image', icon: Icons.extension),
     Section(title: 'Custom + painter', icon: Icons.bolt),
+    Section(title: 'Neon Glow Animation', icon: Icons.lightbulb_outline),
   ];
-
 
   @override
   void initState() {
@@ -90,10 +91,12 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
         break;
       case 'Custom + image':
         page = CarDrivePage();
-        ;
         break;
       case 'Custom + painter':
         page = NeonWavePage();
+        break;
+      case 'Neon Glow Animation':
+        page = NeonBrainPage();
         break;
       default:
         page = SectionPage(title: section.title); // fallback
