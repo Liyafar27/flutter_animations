@@ -75,7 +75,6 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
 
   void openSection(Section section) {
     Widget page;
-
     switch (section.title) {
       case 'Implicit Animations':
         page = ImplicitAnimationsPage();
