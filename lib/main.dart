@@ -1,12 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_animations_showroom/animations/custom/neon_brain.dart';
-import 'package:flutter_animations_showroom/animations/hero/hero_animation_page.dart';
-import 'package:flutter_animations_showroom/animations/implicit/implicit_animation_page.dart';
+import 'package:flutter_animations_showroom/animations/explicit/explicit_animations_page.dart';
 
+import 'animations/custom/crystal_animation.dart';
+import 'animations/custom/heels_animations.dart';
+import 'animations/custom/neon_brain.dart';
 import 'animations/custom/wave_animations.dart';
-import 'animations/explicit/explicit_animations_page.dart';
-import 'animations/physics/car_animation.dart';
+import 'animations/custom/waving_flag_animation.dart';
+import 'animations/hero/hero_animation_page.dart';
+import 'animations/implicit/implicit_animation_page.dart';
+import 'animations/custom/car_animation.dart';
 import 'animations/physics/physics_animation_page.dart';
+
+
 
 void main() => runApp(FlutterAnimationsLab());
 
@@ -46,15 +51,23 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
     Color(0xFF61F6FF).withValues(alpha: 0.1),
     Color(0xFF872BDC).withValues(alpha: 0.1),
     Color(0xFFADFF2F).withValues(alpha: 0.1),
+    Color(0xFFFF2FD5).withValues(alpha: 0.1),
+    Color(0xFFE0EC91).withValues(alpha: 0.1),
+    Color(0xFF9C55E1).withValues(alpha: 0.1),
+
   ];
   final List<Section> sections = [
     Section(title: 'Implicit Animations', icon: Icons.auto_awesome),
     Section(title: 'Explicit Animations', icon: Icons.timeline),
     Section(title: 'Hero Animations', icon: Icons.flight_takeoff),
     Section(title: 'Physics-based', icon: Icons.attractions),
-    Section(title: 'Custom + image', icon: Icons.extension),
+    Section(title: 'Car Driving Animatiom', icon: Icons.extension),
     Section(title: 'Custom + painter', icon: Icons.bolt),
     Section(title: 'Neon Glow Animation', icon: Icons.lightbulb_outline),
+    Section(title: 'Waving flag Animation', icon: Icons.lightbulb_outline),
+  Section(title: 'Rotation Animations', icon: Icons.lightbulb_outline),
+    Section(title: 'Heels walk animation', icon: Icons.lightbulb_outline),
+
   ];
 
   @override
@@ -88,7 +101,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
       case 'Physics-based':
         page = PhysicsAnimationPage();
         break;
-      case 'Custom + image':
+      case 'Car Driving Animatiom':
         page = CarDrivePage();
         break;
       case 'Custom + painter':
@@ -97,6 +110,13 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
       case 'Neon Glow Animation':
         page = NeonBrainPage();
         break;
+      case 'Waving flag Animation':
+        page = WavingFlag();
+      case  'Rotation Animations':
+        page = MagicCrystal();
+      case  'Heels walk animation':
+        page = HeelWalkPage();
+
       default:
         page = SectionPage(title: section.title); // fallback
     }

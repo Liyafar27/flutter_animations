@@ -5,51 +5,60 @@ class ExplicitAnimationsPage extends StatefulWidget {
   _ExplicitAnimationsPageState createState() => _ExplicitAnimationsPageState();
 }
 
-class _ExplicitAnimationsPageState extends State<ExplicitAnimationsPage>
-    with SingleTickerProviderStateMixin {
+class _ExplicitAnimationsPageState extends State<ExplicitAnimationsPage> with TickerProviderStateMixin{
   late AnimationController _controller;
   late Animation<double> _sizeAnimation;
   late Animation<Color?> _colorAnimation;
   late Animation<Offset> _positionAnimation;
   late Animation<double> _textScaleAnimation;
 
+  late AnimationController _heartController;
+  late Animation<double> _heartSizeAnimation;
+  late Animation<Color?> _heartColorAnimation;
+
   @override
   void initState() {
     super.initState();
 
-    // Контроллер анимации
     _controller = AnimationController(
       duration: const Duration(seconds: 2),
       vsync: this,
-    )..repeat(reverse: true); // повторяем анимацию с реверсом
+    )..repeat(reverse: true);
 
-    // Анимация размера
-    _sizeAnimation = Tween<double>(
-      begin: 50,
-      end: 120,
-    ).animate(CurvedAnimation(parent: _controller, curve: Curves.easeInOut));
+    _sizeAnimation = Tween<double>(begin: 50, end: 120).animate(
+      CurvedAnimation(parent: _controller, curve: Curves.easeInOut),
+    );
 
-    // Анимация цвета
-    _colorAnimation = ColorTween(
-      begin: Colors.purpleAccent,
-      end: Colors.blueAccent,
-    ).animate(CurvedAnimation(parent: _controller, curve: Curves.easeInOut));
+    _colorAnimation = ColorTween(begin: Colors.purpleAccent, end: Colors.blueAccent).animate(
+      CurvedAnimation(parent: _controller, curve: Curves.easeInOut),
+    );
 
-    // Анимация перемещения
-    _positionAnimation = Tween<Offset>(
-      begin: Offset(0, 0),
-      end: Offset(0, -0.5),
-    ).animate(CurvedAnimation(parent: _controller, curve: Curves.easeInOut));
+    _positionAnimation = Tween<Offset>(begin: Offset(0, 0), end: Offset(0, -0.5)).animate(
+      CurvedAnimation(parent: _controller, curve: Curves.easeInOut),
+    );
 
-    _textScaleAnimation = Tween<double>(
-      begin: 0.6,
-      end: 1.1,
-    ).animate(CurvedAnimation(parent: _controller, curve: Curves.easeInOut));
+    _textScaleAnimation = Tween<double>(begin: 0.6, end: 1.1).animate(
+      CurvedAnimation(parent: _controller, curve: Curves.easeInOut),
+    );
+
+    _heartController = AnimationController(
+      duration: const Duration(seconds: 1),
+      vsync: this,
+    )..repeat(reverse: true);
+
+    _heartSizeAnimation = Tween<double>(begin: 50, end: 80).animate(
+      CurvedAnimation(parent: _heartController, curve: Curves.easeInOut),
+    );
+
+    _heartColorAnimation = ColorTween(begin: Colors.red, end: Colors.pink).animate(
+      CurvedAnimation(parent: _heartController, curve: Curves.easeInOut),
+    );
   }
 
   @override
   void dispose() {
     _controller.dispose();
+    _heartController.dispose();
     super.dispose();
   }
 
@@ -58,20 +67,17 @@ class _ExplicitAnimationsPageState extends State<ExplicitAnimationsPage>
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: AppBar(
-        title: Text(
-          'Explicit Animations',
-          style: TextStyle(
-            color: Colors.lightBlue,
-            fontSize: 20,
-            fontWeight: FontWeight.w700,
-          ),
-        ),
+        title: Text('Explicit Animations', style: TextStyle(
+          color: Colors.lightBlue,
+          fontSize: 20,
+          fontWeight: FontWeight.w700,
+        ),),
         backgroundColor: Colors.black,
       ),
       body: Center(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            SizedBox(height: 50),
             AnimatedBuilder(
               animation: _controller,
               builder: (context, child) {
@@ -104,29 +110,72 @@ class _ExplicitAnimationsPageState extends State<ExplicitAnimationsPage>
               },
             ),
             SizedBox(height: 20),
-
-            Positioned(
-              top: 100,
-              child: AnimatedBuilder(
-                animation: _textScaleAnimation,
-                builder: (context, child) {
-                  return Transform.scale(
-                    scale: _textScaleAnimation.value,
-                    child: Text(
-                      'Explicit Animations',
-                      style: TextStyle(
-                        fontSize: 32,
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold,
-                      ),
+            AnimatedBuilder(
+              animation: _textScaleAnimation,
+              builder: (context, child) {
+                return Transform.scale(
+                  scale: _textScaleAnimation.value,
+                  child: Text(
+                    'Explicit Animations',
+                    style: TextStyle(
+                      fontSize: 32,
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
                     ),
-                  );
-                },
-              ),
+                  ),
+                );
+              },
+            ),
+            SizedBox(height: 30),
+            AnimatedBuilder(
+              animation: _heartController,
+              builder: (context, child) {
+                return CustomPaint(
+                  size: Size(_heartSizeAnimation.value, _heartSizeAnimation.value),
+                  painter: HeartPainter(_heartColorAnimation.value),
+                );
+              },
             ),
           ],
         ),
       ),
     );
   }
+}
+
+class HeartPainter extends CustomPainter {
+  final Color? color;
+  HeartPainter(this.color);
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    final paint = Paint()
+      ..color = color ?? Colors.red
+      ..style = PaintingStyle.fill;
+    final Paint glowPaint = Paint()
+      ..color = (color ?? Colors.red).withOpacity(0.6)
+      ..style = PaintingStyle.fill
+      ..maskFilter = MaskFilter.blur(BlurStyle.normal, 10);
+    final double width = size.width;
+    final double height = size.height;
+
+    final path = Path()
+      ..moveTo(width / 2, height * 0.35)
+      ..cubicTo(
+        width * 0.15, 0,
+        0, height * 0.5,
+        width / 2, height,
+      )
+      ..cubicTo(
+        width, height * 0.5,
+        width * 0.85, 0,
+        width / 2, height * 0.35,
+      )
+      ..close();
+    canvas.drawPath(path, glowPaint);
+    canvas.drawPath(path, paint);
+  }
+
+  @override
+  bool shouldRepaint(covariant CustomPainter oldDelegate) => false;
 }
