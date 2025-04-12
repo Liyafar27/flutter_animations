@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animations_showroom/animations/explicit/explicit_animations_page.dart';
 
+import 'animations/custom/car_animation.dart';
 import 'animations/custom/crystal_animation.dart';
 import 'animations/custom/heels_animations.dart';
 import 'animations/custom/neon_brain.dart';
@@ -8,10 +9,7 @@ import 'animations/custom/wave_animations.dart';
 import 'animations/custom/waving_flag_animation.dart';
 import 'animations/hero/hero_animation_page.dart';
 import 'animations/implicit/implicit_animation_page.dart';
-import 'animations/custom/car_animation.dart';
 import 'animations/physics/physics_animation_page.dart';
-
-
 
 void main() => runApp(FlutterAnimationsLab());
 
@@ -54,7 +52,6 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
     Color(0xFFFF2FD5).withValues(alpha: 0.1),
     Color(0xFFE0EC91).withValues(alpha: 0.1),
     Color(0xFF9C55E1).withValues(alpha: 0.1),
-
   ];
   final List<Section> sections = [
     Section(title: 'Implicit Animations', icon: Icons.auto_awesome),
@@ -65,9 +62,8 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
     Section(title: 'Custom + painter', icon: Icons.bolt),
     Section(title: 'Neon Glow Animation', icon: Icons.lightbulb_outline),
     Section(title: 'Waving flag Animation', icon: Icons.lightbulb_outline),
-  Section(title: 'Rotation Animations', icon: Icons.lightbulb_outline),
+    Section(title: 'Rotation Animations', icon: Icons.lightbulb_outline),
     Section(title: 'Heels walk animation', icon: Icons.lightbulb_outline),
-
   ];
 
   @override
@@ -112,9 +108,9 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
         break;
       case 'Waving flag Animation':
         page = WavingFlag();
-      case  'Rotation Animations':
+      case 'Rotation Animations':
         page = MagicCrystal();
-      case  'Heels walk animation':
+      case 'Heels walk animation':
         page = HeelWalkPage();
 
       default:
@@ -139,7 +135,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
         title: const Text(
           'Flutter Animations Lab',
           style: TextStyle(
-            color: Color(0xFFFF61F6),
+            color: Color(0xFF71FF61),
             fontWeight: FontWeight.bold,
           ),
         ),
@@ -155,7 +151,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
             crossAxisCount: 2,
             mainAxisSpacing: 10,
             crossAxisSpacing: 10,
-            childAspectRatio: 1.5,
+            childAspectRatio: 1.9,
           ),
           itemBuilder: (_, i) {
             final delay = i * 0.1;
