@@ -1,14 +1,21 @@
-## 🧿Flutter Animation Showcase🧿
+## 🎨 Pure Flutter Animations
 
-This app demonstrates various Flutter animation techniques using only Flutter's built-in methods.
+This app demonstrates various animation techniques **using only Flutter's built-in capabilities**, without any third-party libraries.
 
+### ✅ Technologies Used
+- `CustomPainter`
+- `AnimationController`
+- `AnimatedBuilder`
+- `Transform`, `ClipPath`, `Canvas`
+### - No dependencies outside Flutter SDK
+  
 📸 Screenshots
 <p align="center">
+    <img src="https://github.com/Liyafar27/my_storage/blob/master/14.gif" width="250" alt="accessibility text">
     <img src="https://raw.githubusercontent.com/Liyafar27/my_storage/refs/heads/master/00000.gif" width="250" alt="accessibility text">
     <img src="https://github.com/Liyafar27/my_storage/blob/master/4.gif" width="250" alt="accessibility text">
     <img src="https://github.com/Liyafar27/my_storage/blob/master/5.gif" width="250" alt="accessibility text">
 
-    
 <p align="center">
     <img src="https://github.com/Liyafar27/my_storage/blob/master/7.gif" width="250" alt="accessibility text">
     <img src="https://github.com/Liyafar27/my_storage/blob/master/33.gif" width="250" alt="accessibility text">
