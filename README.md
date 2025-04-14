@@ -18,10 +18,10 @@ This app demonstrates various animation techniques **using only Flutter's built-
 
 
 <p align="center">
+    <img src="https://github.com/Liyafar27/my_storage/blob/master/44.gif" width="200" alt="accessibility text">
     <img src="https://github.com/Liyafar27/my_storage/blob/master/5.gif" width="200" alt="accessibility text">
     <img src="https://github.com/Liyafar27/my_storage/blob/master/8.gif" width="200" alt="accessibility text">
     <img src="https://github.com/Liyafar27/my_storage/blob/master/13.gif" width="200" alt="accessibility text">
-    <img src="https://github.com/Liyafar27/my_storage/blob/master/44.gif" width="200" alt="accessibility text">
     
 
     
