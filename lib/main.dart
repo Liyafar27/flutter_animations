@@ -3,6 +3,8 @@ import 'package:flutter_animations_showroom/animations/explicit/explicit_animati
 
 import 'animations/custom/car_animation.dart';
 import 'animations/custom/crystal_animation.dart';
+import 'animations/custom/gesture_animation_cat.dart';
+import 'animations/custom/gesture_animation_chameleon.dart';
 import 'animations/custom/heels_animations.dart';
 import 'animations/custom/neon_brain.dart';
 import 'animations/custom/wave_animations.dart';
@@ -54,16 +56,21 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
     Color(0xFF9C55E1).withValues(alpha: 0.1),
   ];
   final List<Section> sections = [
-    Section(title: 'Implicit Animations', icon: Icons.auto_awesome),
-    Section(title: 'Explicit Animations', icon: Icons.timeline),
     Section(title: 'Hero Animations', icon: Icons.flight_takeoff),
     Section(title: 'Physics-based', icon: Icons.attractions),
-    Section(title: 'Car Driving Animatiom', icon: Icons.extension),
+    Section(title: 'Car Driving Animation', icon: Icons.extension),
     Section(title: 'Custom + painter', icon: Icons.bolt),
     Section(title: 'Neon Glow Animation', icon: Icons.lightbulb_outline),
     Section(title: 'Waving flag Animation', icon: Icons.lightbulb_outline),
     Section(title: 'Rotation Animations', icon: Icons.lightbulb_outline),
     Section(title: 'Heels walk animation', icon: Icons.lightbulb_outline),
+    Section(
+      title: 'Gesture Animation Chameleon',
+      icon: Icons.lightbulb_outline,
+    ),
+    Section(title: 'Gesture Animation Cat', icon: Icons.lightbulb_outline),
+    Section(title: 'Implicit Animations', icon: Icons.auto_awesome),
+    Section(title: 'Explicit Animations', icon: Icons.timeline),
   ];
 
   @override
@@ -97,7 +104,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
       case 'Physics-based':
         page = PhysicsAnimationPage();
         break;
-      case 'Car Driving Animatiom':
+      case 'Car Driving Animation':
         page = CarDrivePage();
         break;
       case 'Custom + painter':
@@ -108,11 +115,18 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
         break;
       case 'Waving flag Animation':
         page = WavingFlag();
+        break;
       case 'Rotation Animations':
         page = MagicCrystal();
+        break;
       case 'Heels walk animation':
         page = HeelWalkPage();
-
+        break;
+      case 'Gesture Animation Cat':
+        page = GestureAnimationCat();
+        break;
+      case 'Gesture Animation Chameleon':
+        page = GestureAnimationChameleon();
       default:
         page = SectionPage(title: section.title); // fallback
     }
@@ -144,7 +158,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
         elevation: 0,
       ),
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 50),
+        padding: const EdgeInsets.symmetric(horizontal: 16),
         child: GridView.builder(
           itemCount: sections.length,
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
